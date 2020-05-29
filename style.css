@@ -1,0 +1,102 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+.header {
+    height: 20%;
+    width: 100%;
+    background-color: #202225;
+}
+
+.screen {
+    display: flex;
+    height: 80%;
+}
+
+.screen nav {
+    height: 100%;
+    min-width: 200px;
+    font-size: 20px;
+    background-color: #2f3136;
+}
+
+.screen nav ul {
+    padding:10px;
+    margin:10px;
+    list-style:none;
+}
+
+.screen nav ul li{
+    margin:10px;
+}
+
+.screen > div {
+    height: 100%;
+    width: calc(100% - 200px);
+    background-color: #36393f;
+    overflow-y: scroll;
+}
+
+.screen #view > div {
+    display: flex;
+    margin: 10px;
+}
+
+.icon-menu {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+
+.icon-option {
+    height: 20px;
+    width: 20px;
+}
+
+.icon-view {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+
+.acces {
+    display: flex;
+    justify-content: space-around;
+    height: 25%;
+}
+
+.arrow {
+    display: flex;
+    width: 10%;
+    justify-content: space-around;
+}
+
+.search {
+    width: 80%;
+}
+
+.search input {
+    width: 100%;
+}
+
+.option {
+    display: flex;
+    justify-content: space-around;
+    height: 50%;
+}
+
+.option > div {
+    text-align: center;
+}
+
+.option > div p{
+    margin: 0;
+}
+
+.tab {
+    height: 25%;
+}

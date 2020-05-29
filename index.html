@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'">
+    <meta http-equiv="X-Content-Security-Policy" content="script-src 'self' 'unsafe-inline'">
+    <title id="title"></title>
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+    <div class="header">
+      <div class="tab">
+        <div class="etabs-tabgroup">
+          <div class="etabs-tabs">
+            <div class="newTabs" onclick="newTab()">
+              new Tab +
+            </div>
+          </div>
+          <div class="etabs-buttons"></div>
+        </div>
+        <div class="etabs-views"></div>
+      </div>
+      <div class="option">
+        <div class="newFolder" onclick="creatFolder()">
+          <img src="./images/new-folder.svg" class="icon-option" alt="">
+          <p>new folder</p>
+        </div>
+        <div class="newFile" onclick="creatFile()">
+          <img src="./images/new-file.svg" class="icon-option" alt="">
+          <p>new file</p>
+        </div>
+        <div class="copy" onclick="copy()">
+          <img src="./images/copy.svg" class="icon-option" alt="">
+          <p>copy</p>
+        </div>
+        <div class="past" onclick="past()">
+          <img src="./images/paste.svg" class="icon-option" alt="">
+          <p>past</p>
+        </div>
+        <div class="rename" onclick="rename()">
+          <img src="./images/rename.svg" class="icon-option" alt="">
+          <p>rename</p>
+        </div>
+        <div class="move" onclick="move()">
+          <img src="./images/moving.svg" class="icon-option" alt="">
+          <p>move to</p>
+        </div>
+        <div class="trash" onclick="trash()">
+          <img src="./images/trash.svg" class="icon-option" alt="">
+          <p>delete</p>
+        </div>
+      </div>
+      <div class="acces">
+        <div class="arrow">
+          <div class="back">
+            <img src="./images/arrow-left.svg" class="icon-menu" onclick="backPath()" alt="">
+          </div>
+          <div class="until">
+            <img src="./images/arrow-up.svg" class="icon-menu" onclick="until()" alt="">
+          </div>
+        </div>
+        <div class="search">
+            <input type="text" id="path" value="">
+        </div>
+        <div onclick="goToFolder()">
+          <p>GO</p>
+        </div>
+      </div>
+    </div>
+    <div class="screen">
+      <nav>
+        <ul>
+          <li ondblclick="view('home')">
+            <img src="./images/home.svg" class="icon-menu" alt="">
+            Home
+          </li>
+          <li ondblclick="view('desktop')">
+            <img src="./images/desktop.svg" class="icon-menu" alt="">
+            Desktop
+          </li>
+          <!-- <li ondblclick="view('device')">
+            <img src="./images/usb.svg" class="icon-menu" alt="">
+            Device
+          </li> -->
+          <li ondblclick="view('document')">
+            <img src="./images/document.svg" class="icon-menu" alt="">
+            Documents
+          </li>
+          <li ondblclick="view('download')">
+            <img src="./images/download.svg" class="icon-menu" alt="">
+            Downloads
+          </li>
+          <li ondblclick="view('picture')">
+            <img src="./images/picture.svg" class="icon-menu" alt="">
+            Pictures
+          </li>
+          <li ondblclick="view('video')">
+            <img src="./images/video.svg" class="icon-menu" alt="">
+            Videos
+          </li>
+          <li ondblclick="view('music')">
+            <img src="./images/music.svg" class="icon-menu" alt="">
+            Musics
+          </li>
+        </ul>
+      </nav>
+      <div id="view">
+        <table>
+          <thead>
+            <tr>
+              <th>selected</th>
+              <th>type</th>
+              <th>name</th>
+              <th>create at</th>
+              <th>modify at</th>
+              <th>size</th>
+            </tr>
+          </thead>
+          <tbody id="viewBody">
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="./renderer.js"></script>
+  </body>
+</html>
